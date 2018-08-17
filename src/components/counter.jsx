@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 class Counter extends Component {
   state = {
-    count: 0,
-    tags: []
+    count: 0
   };
 
   // constructor() {
@@ -13,17 +12,6 @@ class Counter extends Component {
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
-
-  renderTags() {
-    if (this.state.tags.length === 0) return <p>There are no tags!</p>;
-    return (
-      <ul>
-        {this.state.tags.map(tag => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-    );
-  }
 
   render() {
     return (
@@ -36,8 +24,6 @@ class Counter extends Component {
           {" "}
           Increment
         </button>
-        {this.state.tags.length === 0 && "Please create a new tag!"}
-        {this.renderTags()}
       </div>
     );
   }

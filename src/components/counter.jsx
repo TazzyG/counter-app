@@ -9,7 +9,6 @@ class Counter extends Component {
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
   render() {
-    var product = { id: 1 };
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
